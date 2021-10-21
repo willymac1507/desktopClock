@@ -10,7 +10,7 @@ async function refreshQuote() {
 };
 
 async function getTime() {
-    fetch("http://worldtimeapi.org/api/ip")
+    fetch("https://worldtimeapi.org/api/ip")
         .then((response) => {
             return response.json();
         })
