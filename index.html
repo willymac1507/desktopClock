@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/desktop.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+
+  <title>My Clock</title>
+</head>
+
+<body>
+  <div class="main unexpanded">
+
+    <div class="quote">
+      <div class="quote-content">
+        <div class="quote-text">"Where all think alike, no one thinks very much."</div>
+        <div class="quote-author">Walter Lippmann</div>
+      </div>
+      <div class="refresh-quote">
+        <svg class="refresh-quote-icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M7.188 10.667a.208.208 0 01.147.355l-2.344 2.206a5.826 5.826 0 009.578-2.488l2.387.746A8.322 8.322 0 013.17 14.94l-2.149 2.022a.208.208 0 01-.355-.148v-6.148h6.52zm7.617-7.63L16.978.958a.208.208 0 01.355.146v6.23h-6.498a.208.208 0 01-.147-.356L13 4.765A5.825 5.825 0 003.43 7.26l-2.386-.746a8.32 8.32 0 0113.76-3.477z"
+            fill="#FFF" fill-rule="nonzero" opacity=".5" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="expanded-container">
+      <div class="expanded-inner">
+        <div class="headline row1 col1">current timezone</div>
+        <div id="zone" class="detail row2 col1">timezone here</div>
+        <div class="headline row4 col1">day of the year</div>
+        <div id="day-of-year" class="detail row5 col1">295</div>
+        <div class="headline row1 col3">day of the week</div>
+        <div id="day-of-week" class="detail row2 col3">5</div>
+        <div class="headline row4 col3">week number</div>
+        <div id="week-number" class="detail row5 col3">48</div>
+      </div>
+    </div>
+
+    <div class="clock-container">
+
+      <div class="greeting">
+          <img class="sun-and-moon sun" src="images/desktop/icon-sun.svg">
+          <img class="sun-and-moon moon" src="images/desktop/icon-moon.svg">
+          <span: class="time-of-day"></span:>it's currently
+      </div>
+
+      <div class="time">
+        <div class="time-text">...</div>
+        <div class="time-zone">...</div>
+      </div>
+
+      <div class="location-container">
+        <div class="location">
+          In ...</div>
+        <div class="expand-button"> <span class="expand-text">more</span> <img class="arrow-button"
+            src="images/desktop/icon-arrow-up.svg" alt="u"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="clock.js"></script>
+
+</body>
+
+</html>

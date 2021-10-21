@@ -1,0 +1,276 @@
+html {
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-image: url('../images/desktop/bg-image-morning.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.morning {
+    background-image: url('../images/desktop/bg-image-morning.jpg');
+}
+
+.afternoon {
+    background-image: url('../images/desktop/bg-image-afternoon.jpg');
+}
+
+.evening {
+    background-image: url('../images/desktop/bg-image-evening.jpg');
+}
+
+.night {
+    background-image: url('../images/desktop/bg-image-nighttime.jpg');
+}
+
+.main {
+    width: 80vw;
+    height: 90vh;
+    padding: 5vh 10vw;
+    position: relative;
+}
+
+.quote {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.quote-content {
+    display: inline-block;
+    max-width: 45%;
+}
+
+.quote-author {
+    margin-top: 0.7rem;
+    font-weight: bold;
+}
+
+.refresh-quote {
+    display: inline-block;
+}
+
+.refresh-quote-icon {
+    margin-left: 1rem;
+    margin-top: 0.25rem;
+}
+
+.refresh-quote-icon:hover path {
+    opacity: 1;
+}
+
+.refresh-quote-icon:hover {
+    cursor: pointer;
+}
+
+.expanded-container,
+.clock-container {
+    width: 80%;
+    height: 50%;
+    left: 10%;
+    bottom: 5%;
+    position: absolute;
+}
+
+.expanded-container {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background-color: #fff;
+    opacity: 75%;
+    z-index: 1;
+    height: 0;
+    transition: height 0.5s linear;
+    overflow: hidden;
+}
+
+.expanded-inner {
+    display: grid;
+    margin-top: 5vh;
+    width: 60vw;
+    height: 30vh;
+    overflow: hidden;
+    grid-template-columns: 50% 10% 30%;
+    grid-template-rows: 10% 30% 10% 10% 30%;
+    row-gap: 2%;
+    column-gap: 5%;
+    color: #303030;
+}
+
+.row1 {
+    grid-row: 1;
+}
+
+.row2 {
+    grid-row: 2;
+}
+
+.row4 {
+    grid-row: 4;
+}
+
+.row5 {
+    grid-row: 5;
+}
+
+.col1 {
+    grid-column: 1;
+}
+
+.col2 {
+    grid-column: 2;
+}
+
+.col3 {
+    grid-column: 3;
+}
+
+.headline {
+    font-size: 0.95rem;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+}
+
+.detail {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.clock-container {
+    padding-top: 2rem;
+    bottom: 5%;
+    transition: bottom 0.5s linear;
+    z-index: 2;
+}
+
+.greeting,
+.time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.greeting {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+}
+
+.greeting svg {
+    margin: 0 0.5rem;
+}
+
+.time {
+    position: relative;
+}
+
+.time-text {
+    font-size: 13rem;
+    letter-spacing: -0.4rem;
+    font-weight: 700;
+    margin-left: 0.2rem;
+}
+
+.time-zone {
+    display: inline-block;
+    position: relative;
+    bottom: -5rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.75rem;
+    margin-left: 2rem;
+}
+
+.location-container {
+    position: relative;
+    width: 100%;
+}
+
+.location {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+.sun-and-moon {
+    margin-right: 1rem;
+}
+
+.expand-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    position: absolute;
+    bottom: 0;
+    left: 88%;
+    background-color: #fff;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 8.5rem;
+}
+
+.expand-text {
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    opacity: 50%;
+}
+
+.arrow-button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transform: rotate(180deg);
+}
+
+.unexpanded .arrow-button {
+    transform: rotate(360deg);
+}
+
+.expanded .clock-container {
+    /* transform: translateY(-90%); */
+    bottom: 40%;
+    transition: bottom 0.5s linear;
+}
+
+.expanded .quote {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.expanded .expanded-container {
+    height: 40%;
+    transition: height 0.5s linear;
+}
+
+.night .sun {
+    display: none;
+}
+
+.evening .sun {
+    display: none;
+}
+
+.morning .moon {
+    display: none;
+}
+
+.afternoon .moon {
+    display: none;
+}
