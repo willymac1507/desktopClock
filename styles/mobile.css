@@ -42,11 +42,12 @@ body {
     align-items: flex-start;
     opacity: 1;
     transition: opacity 0.5s linear;
+    font-size: 0.75rem;
 }
 
 .quote-content {
     display: inline-block;
-    max-width: 45%;
+    max-width: 90%;
 }
 
 .quote-author {
@@ -74,16 +75,17 @@ body {
 .expanded-container,
 .clock-container {
     width: 80%;
-    height: 50%;
+    height: 40%;
     left: 10%;
     bottom: 5%;
     position: absolute;
 }
 
 .expanded-container {
-    width: 100vw;
     left: 0vw;
     bottom: 0;
+    width: 100vw;
+    height: 50%;
     display: flex;
     align-items: top;
     justify-content: center;
@@ -96,54 +98,58 @@ body {
 }
 
 .expanded-inner {
-    display: grid;
     margin-top: 5vh;
-    width: 60vw;
+    display: grid;
+    width: 80vw;
     height: 30vh;
     overflow: hidden;
-    grid-template-columns: 50% 10% 30%;
-    grid-template-rows: 10% 30% 10% 10% 30%;
-    row-gap: 2%;
-    column-gap: 5%;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 22% 22% 22% 22%;
+    row-gap: 4%;
+    column-gap: 10%;
     color: #303030;
 }
 
-.row1 {
+.mr1, .mr2, .mr3, .mr4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mr1 {
     grid-row: 1;
 }
 
-.row2 {
+.mr2 {
     grid-row: 2;
 }
 
-.row4 {
+.mr3 {
+    grid-row: 3;
+}
+
+.mr4 {
     grid-row: 4;
 }
 
-.row5 {
-    grid-row: 5;
-}
-
-.col1 {
+.mc1 {
     grid-column: 1;
 }
 
-.col2 {
+.mc2 {
+    display: flex;
+    justify-content: end;
     grid-column: 2;
 }
 
-.col3 {
-    grid-column: 3;
-}
-
 .headline {
-    font-size: 0.95rem;
-    letter-spacing: 0.18rem;
+    font-size: 0.625rem;
+    letter-spacing: 0.16rem;
     text-transform: uppercase;
 }
 
 .detail {
-    font-size: 3.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
@@ -162,9 +168,9 @@ body {
 }
 
 .greeting {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    letter-spacing: 0.25rem;
+    font-size: 0.9rem;
+    line-height: 1.56rem;
+    letter-spacing: 0.19rem;
     text-transform: uppercase;
 }
 
@@ -177,34 +183,34 @@ body {
 }
 
 .time-text {
-    font-size: 13rem;
-    letter-spacing: -0.4rem;
+    font-size: 6.25rem;
+    line-height: 7rem;
+    letter-spacing: -0.16rem;
     font-weight: 700;
-    margin-left: 0.2rem;
 }
 
 .time-zone {
     display: inline-block;
     position: relative;
-    bottom: -5rem;
-    font-size: 2.5rem;
+    bottom: -3rem;
+    font-size: 0.9rem;
     font-weight: 300;
     text-transform: uppercase;
     line-height: 1.75rem;
-    margin-left: 2rem;
 }
 
 .location-container {
     position: relative;
+    top: 0.5rem;
     width: 100%;
 }
 
 .location {
-    margin-left: 1rem;
-    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
     font-weight: 700;
     line-height: 1.75rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.19rem;
     text-transform: uppercase;
 }
 
@@ -212,14 +218,25 @@ body {
     margin-right: 1rem;
 }
 
+.currently {
+    display: none;
+}
+
+img.sun-and-moon {
+    width: 5%;
+    height: auto;
+}
+
 .expand-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 88%;
+    left: 88%; */
+    margin-left: 0.5rem;
+    margin-top: 3rem;
     background-color: #fff;
     border-radius: 2rem;
     height: 3rem;
@@ -248,7 +265,7 @@ body {
 
 .expanded .clock-container {
     /* transform: translateY(-90%); */
-    bottom: 40%;
+    bottom: 45%;
     transition: bottom 0.5s linear;
 }
 
@@ -258,7 +275,7 @@ body {
 }
 
 .expanded .expanded-container {
-    height: 35%;
+    height: 40%;
     transition: height 0.5s linear;
 }
 

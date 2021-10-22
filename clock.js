@@ -54,6 +54,7 @@ async function getLocation() {
             return response.json();
         })
         .then((data) => {
+            console.log(data);
             $(".location").html(`in ${data.city}, ${data.country_alpha_2}`);
         })
         .catch(error => {

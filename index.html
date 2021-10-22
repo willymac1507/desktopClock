@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/desktop.css">
+
+  <link rel='stylesheet' media='screen and (max-width: 499px)' href='styles/mobile.css' />
+  <link rel='stylesheet' media='screen and (min-width: 500px) and (max-width: 768px)' href='styles/tablet.css' />
+  <link rel="stylesheet" media='screen and (min-width: 769px)' href="styles/desktop.css">
 
   <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -36,25 +39,12 @@
       </div>
     </div>
 
-    <div class="expanded-container">
-      <div class="expanded-inner">
-        <div class="headline row1 col1">current timezone</div>
-        <div id="zone" class="detail row2 col1">timezone here</div>
-        <div class="headline row4 col1">day of the year</div>
-        <div id="day-of-year" class="detail row5 col1">295</div>
-        <div class="headline row1 col3">day of the week</div>
-        <div id="day-of-week" class="detail row2 col3">5</div>
-        <div class="headline row4 col3">week number</div>
-        <div id="week-number" class="detail row5 col3">48</div>
-      </div>
-    </div>
-
     <div class="clock-container">
 
       <div class="greeting">
           <img class="sun-and-moon sun" src="images/desktop/icon-sun.svg">
           <img class="sun-and-moon moon" src="images/desktop/icon-moon.svg">
-          <span: class="time-of-day"></span:>it's currently
+          <span: class="time-of-day"></span:><span class="currently"></span>
       </div>
 
       <div class="time">
@@ -69,6 +59,19 @@
             src="images/desktop/icon-arrow-up.svg" alt="u"></div>
       </div>
 
+    </div>
+
+    <div class="expanded-container">
+      <div class="expanded-inner">
+        <div class="headline row1 col1 mr1 mc1">current timezone</div>
+        <div id="zone" class="detail row2 col1 mr1 mc2">timezone here</div>
+        <div class="headline row4 col1 mr2 mc1">day of the year</div>
+        <div id="day-of-year" class="detail row5 col1 mr2 mc2">295</div>
+        <div class="headline row1 col3 mr3 mc1">day of the week</div>
+        <div id="day-of-week" class="detail row2 col3 mr3 mc2">5</div>
+        <div class="headline row4 col3 mr4 mc1">week number</div>
+        <div id="week-number" class="detail row5 col3 mr4 mc2">48</div>
+      </div>
     </div>
 
   </div>
